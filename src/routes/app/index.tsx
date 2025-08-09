@@ -10,6 +10,7 @@ export const Route = createFileRoute("/app/")({
   component: RouteComponent,
   beforeLoad: async () => {
     const session = await getSession();
+    console.log("🚀 ~ session:", session)
     if (!session.data) {
       return redirect({
         to: "/",
