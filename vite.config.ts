@@ -20,7 +20,7 @@ export default defineConfig({
         display: "standalone",
         start_url: "/",
         icons: [{
-          src: "./src/launch.png"
+          src: "./src/assets/launch.png"
         }]
       },
     }),
