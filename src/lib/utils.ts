@@ -7,7 +7,8 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  // baseURL: import.meta.env.VITE_API_URL,
+  baseURL: "http://api.day-messages.com",
   headers: {
     "Content-Type": "application/json",
   },
