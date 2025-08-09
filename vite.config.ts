@@ -18,7 +18,7 @@ export default defineConfig({
       manifest: {
         name: "Day Messages",
         display: "standalone",
-        start_url: "/app",
+        start_url: "/",
         icons: [{
           src: "./src/launch.png"
         }]
