@@ -1,4 +1,5 @@
 import { createAuthClient } from "better-auth/react";
 export const { signIn, signUp, signOut, useSession, getSession } = createAuthClient({
-  baseURL: "http://api.day-messages.com",
+  baseURL: import.meta.env.VITE_AUTH_URL
+  // baseURL: "http://api.day-messages.com",
 });
