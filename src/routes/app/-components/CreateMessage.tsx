@@ -44,8 +44,8 @@ const CreateMessage = () => {
         <Button
           disabled={isLoading}
           size="icon"
-          variant="outline"
-          className="size-11 rounded-full ml-auto"
+          variant="ghost"
+          className="size-11 border bg-zinc-900 rounded-xl ml-auto z-50"
         >
           <Plus />
         </Button>

@@ -12,6 +12,7 @@ import { ShineBorder } from "@/components/magicui/shine-border";
 import { getSession, signIn } from "@/lib/auth";
 import InputField from "@/components/custom/InputField";
 import Logo from "@/components/icons/Logo";
+import { Meteors } from "@/components/magicui/meteors";
 
 export const Route = createFileRoute("/_auth/")({
   component: Index,
@@ -60,8 +61,9 @@ function Index() {
   }
 
   return (
-    <div className="flex-1 flex items-center justify-center relative">
-      <Logo className="absolute top-10" width={150}/>
+    <div className="flex-1 flex items-center justify-center relative overflow-x-hidden">
+      <Meteors />
+      <Logo className="absolute top-10" width={150} />
 
       <Card className="relative overflow-hidden">
         <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
