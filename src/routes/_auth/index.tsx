@@ -51,7 +51,7 @@ function Index() {
       const { error } = await signIn.email({
         email: values.email,
         password: values.password,
-        callbackURL: "/app",
+        // callbackURL: "/app",
       });
 
       if (error) {
