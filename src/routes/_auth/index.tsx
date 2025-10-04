@@ -97,7 +97,7 @@ function Index() {
         </CardContent>
       </Card>
 
-      <Button onClick={onGoogleLogin}>Entrar com o google</Button>
+      {/* <Button onClick={onGoogleLogin}>Entrar com o google</Button> */}
     </div>
   );
 }
