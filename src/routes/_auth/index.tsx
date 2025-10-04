@@ -51,7 +51,20 @@ function Index() {
       const { error } = await signIn.email({
         email: values.email,
         password: values.password,
-        // callbackURL: "/app",
+        callbackURL: "/app",
+      });
+
+      if (error) {
+        toast.error(error.message);
+      }
+    });
+  }
+
+  function onGoogleLogin() {
+    startSignin(async () => {
+      const { error } = await signIn.social({
+        provider: "google",
+        callbackURL: "/app",
       });
 
       if (error) {
@@ -61,7 +74,7 @@ function Index() {
   }
 
   return (
-    <div className="flex-1 flex items-center justify-center relative overflow-x-hidden">
+    <div className="flex-1 flex flex-col items-center justify-center gap-4 relative overflow-x-hidden">
       <Meteors />
       <Logo className="absolute top-10" width={150} />
 
@@ -83,6 +96,8 @@ function Index() {
           </Form>
         </CardContent>
       </Card>
+
+      <Button onClick={onGoogleLogin}>Entrar com o google</Button>
     </div>
   );
 }
